@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nagra Customer Support</title>
+    <style>
+      body {
+        background: black;
+      }
+      .container {
+        display: flex;
+        height: 98vh;
+      }
+
+      .main {
+        flex: 6 0 0;
+      }
+
+      .right-aside {
+        flex: 1 0 0;
+        display: flex;
+        justify-content: stretch;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .right-aside > div:first-child {
+        flex: 1 0 0;
+        align-self: center;
+        width: -webkit-fill-available;
+      }
+
+      .right-aside > div:last-child {
+        flex: 2 0 0;
+        align-self: center;
+      }
+      .table {
+        background-color: rgb(61, 61, 61);
+      }
+      .tableData:hover {
+        background-color: black;
+      }
+      #screen {
+        height: 98%;
+        width: 98%;
+      }
+      #image {
+        /* width: 100%; */
+        /* height: 40%; */
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <video id="screen" controls playsinline muted></video>
+      </div>
+      <div class="right-aside">
+        <div>
+          <img id="image" src="img/Company_logo.jfif" alt="Company Logo" />
+        </div>
+        <div>
+          <table class="table">
+            <tr>
+              <td></td>
+              <td class="tableData">
+                <img
+                  data-action="up"
+                  title="UP"
+                  class="button_image"
+                  src="img/upp.svg"
+                />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="tableData">
+                <img
+                  data-action="left"
+                  title="LEFT"
+                  class="button_image"
+                  src="img/leftt.svg"
+                />
+              </td>
+              <td class="tableData">
+                <img
+                  data-action="ok"
+                  title="OK"
+                  class="button_image"
+                  src="img/ok.svg"
+                />
+              </td>
+              <td class="tableData">
+                <img
+                  data-action="right"
+                  title="RIGHT"
+                  class="button_image"
+                  src="img/rightt.svg"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td class="tableData">
+                <img
+                  data-action="down"
+                  title="DOWN"
+                  class="button_image"
+                  src="img/down.svg"
+                />
+              </td>
+              <td></td>
+            </tr>
+            -->
+
+            <tr>
+              <td></td>
+              <td class="tableData">
+                <img
+                  data-action="home"
+                  title="HOME"
+                  class="button_image"
+                  src="img/home.svg"
+                />
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+
+              <td class="tableData">
+                <img
+                  data-action="back"
+                  title="BACK"
+                  class="button_image"
+                  src="img/backk.svg"
+                  style="transform: rotate(180deg)"
+                />
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td class="tableData" id="stop">
+                <img
+                  data-action="stop"
+                  title="Stop Screen Share"
+                  class="button_image"
+                  src="img/stop.svg"
+                />
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td class="tableData">
+                <img
+                  data-action="power"
+                  title="Power"
+                  class="button_image"
+                  src="img/power.svg"
+                />
+              </td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/adapter-latest.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
